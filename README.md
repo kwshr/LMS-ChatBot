@@ -1,7 +1,7 @@
 # LMS-ChatBot
 
 ## Overview
-This project is a chatbot built using a GPT-based model. It uses code from the book "Build A Large Language Model (From Scratch)" by Sebastian Raschka.
+This project is a chatbot built using a GPT-based model. The LLM-Model/ directory uses code from the book "Build A Large Language Model (From Scratch)" by Sebastian Raschka.
 
 ## Credits
 This project includes code from "Build A Large Language Model (From Scratch)" by Sebastian Raschka.
