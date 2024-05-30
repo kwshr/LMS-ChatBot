@@ -1,4 +1,6 @@
-# This file includes code from "Build A Large Language Model From Scratch" by Sebastian Raschka.
+# Copyright (c) Sebastian Raschka under Apache License 2.0 (see LICENSE.txt).
+#This file includes code from "Build A Large Language Model From Scratch" by Sebastian Raschka.
+#      - https://www.manning.com/books/build-a-large-language-model-from-scratch
 # Original source: https://github.com/rasbt/LLMs-from-scratch
 # 
 # If you find this book or code useful for your research, please consider citing it:
