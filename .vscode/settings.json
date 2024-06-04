@@ -1,6 +1,9 @@
 {
     "python.analysis.extraPaths": [
-        "./LLM/Data",
-        "./LLM/Model"
+        "./LLM/Data_Objects",
+        "./LLM/Model",
+        "./LLM/TextGeneration",
+        "./LLM/Train",
+        "./LLM/GPT_weights"
     ]
 }
