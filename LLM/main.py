@@ -1,6 +1,6 @@
 import torch
 from Data.generateTxt import generate
-from GPTInstance import gpt, NEW_CONFIG
+from LLM.Train.GPTInstance import gpt, NEW_CONFIG
 from TextGeneration.Encode_Decode import text_to_token_ids, token_ids_to_text
 import tiktoken
 

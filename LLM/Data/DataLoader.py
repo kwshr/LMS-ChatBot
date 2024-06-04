@@ -26,7 +26,7 @@
 # limitations under the License.
 
 import tiktoken
-from Data.GPTDataset import GPTDatasetV1
+from GPTDataset import GPTDatasetV1
 from torch.utils.data import DataLoader
 
 def create_dataloader_v1(txt, batch_size=4, max_length=256,

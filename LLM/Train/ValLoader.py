@@ -1,6 +1,7 @@
-import path_setup
-from Data.DataLoader import create_dataloader_v1
-from GPTConfig import GPT_CONFIG_124M
+import sys
+sys.path.insert(0,'C:\dev\LMS-ChatBot\LLM\Data')
+from DataLoader import create_dataloader_v1
+from LLM.Train.GPTConfig import GPT_CONFIG_124M
 from Trainingdata import val_data
 
 val_loader = create_dataloader_v1(
