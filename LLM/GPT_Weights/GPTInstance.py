@@ -1,15 +1,11 @@
 import sys
 sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
-<<<<<<<< HEAD:LLM/GPT_Weights/GPTInstance.py
 from GPTModel import GPTModel
 import sys
 sys.path.insert(2,'C:\dev\LMS-ChatBot\LLM\Train')
 from GPTConfig import GPT_CONFIG_124M
-========
 from Model.GPTModel import GPTModel
 from LLM.Train.GPTConfig import GPT_CONFIG_124M
->>>>>>>> 9b608e8 (Refactor):LLM/Train/GPTInstance.py
-
 #Initialize new GPT model instance
 # Define model configurations in a dictionary for compactness
 model_configs = {
