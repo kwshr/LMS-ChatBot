@@ -26,9 +26,9 @@
 # limitations under the License.
 
 import torch.nn as nn
-from Model.MultiHeadAttention import MultiHeadAttention
-from Model.FeedForward import FeedForward
-from Model.LayerNorm import LayerNorm
+from MultiHeadAttention import MultiHeadAttention
+from FeedForward import FeedForward
+from LayerNorm import LayerNorm
 
 class TransformerBlock(nn.Module):
     def __init__(self, cfg):
