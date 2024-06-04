@@ -16,7 +16,6 @@ sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
 from GPTModel import GPTModel
 
 CHOOSE_MODEL = "gpt2-small (124M)"
-INPUT_PROMPT = "Every effort moves"
 
 BASE_CONFIG = {
     "vocab_size": 50257,     # Vocabulary size
