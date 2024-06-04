@@ -5,12 +5,6 @@ from GenerateText import generate
 sys.path.insert(4,'C:\dev\LMS-ChatBot\LLM\GPT_Weights')
 from gpt_download import download_and_load_gpt2
 from LoadWeightsIntoGPT import load_weights_into_gpt
-import sys
-sys.path.insert(2,'C:\dev\LMS-ChatBot\LLM\TextGeneration')
-from GenerateText import generate
-sys.path.insert(4,'C:\dev\LMS-ChatBot\LLM\GPT_Weights')
-from gpt_download import download_and_load_gpt2
-from LoadWeightsIntoGPT import load_weights_into_gpt
 import tiktoken
 sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
 from GPTModel import GPTModel
