@@ -1,4 +1,6 @@
-from Model.GPTModel import GPTModel
+import sys
+sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
+from GPTModel import GPTModel
 import torch
 
 GPT_CONFIG_124M = {

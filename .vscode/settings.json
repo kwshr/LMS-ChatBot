@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./LLM/Data",
+        "./LLM/Model"
+    ]
+}

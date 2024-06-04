@@ -1,5 +1,7 @@
+import sys
+sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
 from Model.GPTModel import GPTModel
-from GPTConfig import GPT_CONFIG_124M
+from LLM.Train.GPTConfig import GPT_CONFIG_124M
 
 #Initialize new GPT model instance
 # Define model configurations in a dictionary for compactness

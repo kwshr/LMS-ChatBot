@@ -1,5 +1,4 @@
 import torch
-import path_setup
 from TextGeneration.Encode_Decode import text_to_token_ids, token_ids_to_text
 from TextGeneration.GenerateText import generate_text_simple
 

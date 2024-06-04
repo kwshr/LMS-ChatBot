@@ -1,10 +1,11 @@
-#import path_setup
 import torch
 import tiktoken
 from TrainModelSimple import train_model_simple
 from TrainLoaderConfig import train_loader
 from ValLoader import val_loader
-from Model.GPTModel import GPTModel
+import sys
+sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
+from GPTModel import GPTModel
 from GPTConfig import GPT_CONFIG_124M
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
