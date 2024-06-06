@@ -1,8 +1,14 @@
 import React from 'react';
 
+/* responsible for parsing user messages and deciding which action
+* to trigger based on certain rules
+*/
+
 const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
-    console.log(message);
+    if(message.includes('hello')){
+    actions.handleHello();
+    }
   };
 
   return (
@@ -10,7 +16,7 @@ const MessageParser = ({ children, actions }) => {
       {React.Children.map(children, (child) => {
         return React.cloneElement(child, {
           parse: parse,
-          actions: {},
+          actions,
         });
       })}
     </div>
