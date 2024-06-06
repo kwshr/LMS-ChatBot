@@ -1,5 +1,5 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code, and run tests across different versions of Node.js
+# For more information, see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: Node.js CI
 
@@ -26,6 +26,18 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+        
+    - name: Change directory to frontEnd/chatBot
+      run: cd LMS-ChatBot/frontEnd/chatBot
+      
+    - name: Install dependencies
+      run: npm ci
+      working-directory: LMS-ChatBot/frontEnd/chatBot
+
+    - name: Build the project
+      run: npm run build --if-present
+      working-directory: LMS-ChatBot/frontEnd/chatBot
+
+    - name: Run tests
+      run: npm test
+      working-directory: LMS-ChatBot/frontEnd/chatBot
