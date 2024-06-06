@@ -1,6 +1,6 @@
 import React from "react";
 import "./UserAvatar.css"
-import UserAvatar from "../Icons/userAvatar.svg";
+import UserAvatar from "../Icons/UserAvatar.svg";
 
 const UserAvatarIcon = () =>{
     return (
