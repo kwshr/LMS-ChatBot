@@ -19,3 +19,37 @@ If you find this book or code useful for your research, please consider citing i
   note         = {Work in progress},
   github       = {https://github.com/rasbt/LLMs-from-scratch}
 }
+
+```
+## Setup Instructions
+
+To set up the pre-trained model and generate responses, follow these steps:
+
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/kwshr/LMS-ChatBot.git
+    cd LMS-ChatBot
+    ```
+
+2. **Navigate to the LLM Directory**:
+    ```bash
+    cd LLM
+    ```
+
+3. **Run the Main Script**:
+    ```bash
+    python main.py
+    ```
+    The script will prompt you to enter a prompt and the maximum number of tokens to generate. 
+
+4. **Optional Configuration**:
+    - If you want to manually edit the `top-k` and `temperature` settings to generate more coherent texts, you can do so by editing the `main.py` file:
+      
+        ```bash
+        # Open main.py
+        nano main.py
+
+        # Locate the configuration section and adjust the parameters as needed
+        top_k = <desired_value>  # Example: top_k = 40
+        temperature = <desired_value>  # Example: temperature = 0.7
+        ```
