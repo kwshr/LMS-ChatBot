@@ -5,11 +5,11 @@ import React from 'react';
 */
 
 const MessageParser = ({ children, actions }) => {
+  const greetings = ['hello','hi','hey',]
   const parse = (message) => {
-    if(message.includes('hello')){
+    if(greetings.some(greetings => message.toLowerCase().includes(greetings)))
     actions.handleHello();
     }
-  };
 
   return (
     <div>
@@ -20,7 +20,7 @@ const MessageParser = ({ children, actions }) => {
         });
       })}
     </div>
-  );
+  )
 };
 
 export default MessageParser;
