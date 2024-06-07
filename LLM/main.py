@@ -1,3 +1,4 @@
+from flask import Flask, request, jsonify
 import torch
 import sys
 sys.path.insert(2,'C:\dev\LMS-ChatBot\LLM\TextGeneration')
@@ -11,7 +12,6 @@ from GPTModel import GPTModel
 from modelConfigurations import model_configs
 
 CHOOSE_MODEL = "gpt2-small (124M)"
-
 BASE_CONFIG = {
     "vocab_size": 50257,     # Vocabulary size
     "context_length": 1024,  # Context length
@@ -28,20 +28,27 @@ model = GPTModel(BASE_CONFIG)
 load_weights_into_gpt(model, params)
 model.eval()
 
-start_context = input('Enter the prompt\n')
-max_tokens = int(input('Enter the max number of words to generate\n'))
+app = Flask(__name__)
 
-tokenizer = tiktoken.get_encoding("gpt2")
-encoded = tokenizer.encode(start_context)
-encoded_tensor = torch.tensor(encoded).unsqueeze(0)
+@app.route('/generate', methods=['GET'])
+def generate_text():
+    start_context = request.args.get("prompt")
+    max_tokens = 100
 
-out = generate(
-    model=model,
-    idx=encoded_tensor,
-    max_new_tokens=max_tokens,
-    context_size=BASE_CONFIG["context_length"],
-    top_k=50,
-    temperature=5.0
-)
-decoded_text = tokenizer.decode(out.squeeze(0).tolist())
-print("Output text:", decoded_text)
+    tokenizer = tiktoken.get_encoding("gpt2")
+    encoded = tokenizer.encode(start_context)
+    encoded_tensor = torch.tensor(encoded).unsqueeze(0)
+
+    out = generate(
+        model=model,
+        idx=encoded_tensor,
+        max_new_tokens=max_tokens,
+        context_size=BASE_CONFIG["context_length"],
+        top_k=50,
+        temperature=5.0
+    )
+    decoded_text = tokenizer.decode(out.squeeze(0).tolist())
+    return(decoded_text)
+
+if __name__ == '__main__':
+    app.run()
