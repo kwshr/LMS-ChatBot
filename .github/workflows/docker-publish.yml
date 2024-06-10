@@ -28,6 +28,6 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v4
       with:
-        context: .
+        context: ./LLM
         push: true
         tags: kwshr/gpt-flask-api:latest
