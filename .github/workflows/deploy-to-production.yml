@@ -1,6 +1,11 @@
 name: Deploy to onRender
 
 on:
+ push:
+    branches:
+      - master
+    paths:
+      - 'LLM/**'
  workflow_run:
     workflows: ["Build and push Docker image"]
     types:
