@@ -5,5 +5,8 @@
         "./LLM/TextGeneration",
         "./LLM/Train",
         "./LLM/GPT_weights"
-    ]
+    ],
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/LLM/Data_Objects;${workspaceFolder}/LLM/Model;${workspaceFolder}/LLM/TextGeneration;${workspaceFolder}/LLM/Train;${workspaceFolder}/LLM/GPT_weights"
+    },
 }
