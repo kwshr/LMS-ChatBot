@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-# import torch
+import torch
 # import sys
 # sys.path.insert(2,'C:\dev\LMS-ChatBot\LLM\TextGeneration')
 from TextGeneration.GenerateText import generate
