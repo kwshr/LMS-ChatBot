@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 //Responsible for handling actions triggered by the MessageParser.
 
@@ -11,6 +11,16 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       messages: [...prev.messages, botMesaage],
     }));
   };
+
+  useEffect(() =>{
+  const handlePrompt = async (message) =>{
+    try{
+      const response = await axios.get('http://localhost:5000/generate')
+    } catch(error){
+      console.error('Error gettign the response', error)
+    }
+  }
+  })
 
   return (
     <div>

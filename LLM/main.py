@@ -48,7 +48,7 @@ def generate_text():
         temperature=5.0
     )
     decoded_text = tokenizer.decode(out.squeeze(0).tolist())
-    return(decoded_text)
+    return jsonify({'generated_text': decoded_text}) 
 
 if __name__ == '__main__':
     app.run()
