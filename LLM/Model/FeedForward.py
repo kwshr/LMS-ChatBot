@@ -25,7 +25,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from GELU import GELU
+from Model.GELU import GELU
 import torch.nn as nn
 
 class FeedForward(nn.Module):

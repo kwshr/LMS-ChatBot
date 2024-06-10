@@ -1,7 +1,7 @@
 import numpy as np
-from AssignWeigths import assign
-from GPTInstance import gpt
-from gpt_download import download_and_load_gpt2
+from GPT_Weights.AssignWeigths import assign
+from GPT_Weights.GPTInstance import gpt
+from GPT_Weights.gpt_download import download_and_load_gpt2
 import torch
 
 settings, params = download_and_load_gpt2(model_size="124M", models_dir="gpt2")
