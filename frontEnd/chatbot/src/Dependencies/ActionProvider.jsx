@@ -1,26 +1,33 @@
 import React, { useEffect } from 'react';
+import axios from 'axios';
+//import { botMessage } from 'react-chatbot-kit/build/src/components/Chat/chatUtils';
 
 //Responsible for handling actions triggered by the MessageParser.
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
-  const handleHello = () => {
-    const botMesaage = createChatBotMessage('How can i help you :)');
-
+  const setChatBotMessage = (message) =>{
+    const botMessage = createChatBotMessage(message);
     setState((prev) => ({
       ...prev,
-      messages: [...prev.messages, botMesaage],
+      messages: [...prev.messages, botMessage],
     }));
+  }
+
+  const handleHello = () => {
+    setChatBotMessage('How can i help you :)');
   };
 
-  useEffect(() =>{
   const handlePrompt = async (message) =>{
     try{
-      const response = await axios.get('http://localhost:5000/generate')
+      const response = await axios.get('http://localhost:5000/generate',{
+        params: {prompt: message}
+      })
+      setChatBotMessage(response.data.generated_text);
     } catch(error){
-      console.error('Error gettign the response', error)
+      console.error('Error gettign the response', error);
+      setChatBotMessage('Sorry, there was an error processing your request');
     }
   }
-  })
 
   return (
     <div>
@@ -28,6 +35,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         return React.cloneElement(child, {
           actions: {
             handleHello,
+            handlePrompt,
           },
         });
       })}
