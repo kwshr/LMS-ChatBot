@@ -1,7 +1,6 @@
-import sys
-sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
-from GPTModel import GPTModel
-sys.path.insert(3,'C:\dev\LMS-ChatBot\LLM\Train')
+# import sys
+# sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
+from Model.GPTModel import GPTModel
 from GPTConfig import GPT_CONFIG_124M
 import torch
 

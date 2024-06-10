@@ -1,7 +1,7 @@
 import sys
-sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
-from GPTModel import GPTModel
-import sys
+# sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
+from Model.GPTModel import GPTModel
+# import sys
 from GPTConfig import GPT_CONFIG_124M
 from Model.GPTModel import GPTModel
 #Initialize new GPT model instance

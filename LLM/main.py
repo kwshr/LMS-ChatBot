@@ -1,14 +1,14 @@
 from flask import Flask, request, jsonify
-import torch
-import sys
-sys.path.insert(2,'C:\dev\LMS-ChatBot\LLM\TextGeneration')
-from GenerateText import generate
-sys.path.insert(4,'C:\dev\LMS-ChatBot\LLM\GPT_Weights')
-from gpt_download import download_and_load_gpt2
-from LoadWeightsIntoGPT import load_weights_into_gpt
+# import torch
+# import sys
+# sys.path.insert(2,'C:\dev\LMS-ChatBot\LLM\TextGeneration')
+from TextGeneration.GenerateText import generate
+# sys.path.insert(4,'C:\dev\LMS-ChatBot\LLM\GPT_Weights')
+from GPT_Weights.gpt_download import download_and_load_gpt2
+from GPT_Weights.LoadWeightsIntoGPT import load_weights_into_gpt
 import tiktoken
-sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
-from GPTModel import GPTModel
+# sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
+from Model.GPTModel import GPTModel
 from modelConfigurations import model_configs
 
 CHOOSE_MODEL = "gpt2-small (124M)"
