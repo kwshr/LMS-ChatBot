@@ -8,6 +8,7 @@ public class EChatbotApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EChatbotApplication.class, args);
+		System.out.println("Hello")	;
 	}
 
 }
