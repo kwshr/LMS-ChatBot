@@ -10,6 +10,7 @@ import tiktoken
 # sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
 from Model.GPTModel import GPTModel
 from modelConfigurations import model_configs
+from flask_cors import CORS 
 
 CHOOSE_MODEL = "gpt2-small (124M)"
 BASE_CONFIG = {
@@ -29,6 +30,7 @@ load_weights_into_gpt(model, params)
 model.eval()
 
 app = Flask(__name__)
+CORS(app) 
 
 @app.route('/generate', methods=['GET'])
 def generate_text():
