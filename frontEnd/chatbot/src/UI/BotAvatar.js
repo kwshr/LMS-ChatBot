@@ -1,6 +1,6 @@
 import React from "react";
 import "./BotAvatar.css"
-import BotAvatar from "../Icons/BotAvatar.svg";
+import BotAvatar from "../Icons/botAvatar.svg";
 
 const ChatbotAvatar = () =>{
     return (
