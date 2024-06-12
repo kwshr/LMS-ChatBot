@@ -54,4 +54,39 @@ If you find this book or code useful for your research, please consider citing i
         temperature = <desired_value>  # Example: temperature = 0.7
         ```
 
+### - To set up the backend part of the project, follow these steps:
+
+
+1. Clone the Repository:
+    ```bash
+    git clone https://github.com/kwshr/LMS-ChatBot.git
+    cd LMS-ChatBot
+    ```
+
+2. Navigate to the LLM Directory:
+    ```bash
+    cd backend/Chatbot
+    ```
+
+3. Since application relies on a pre-trained model hosted on a separate Python Flask backend, ensure it is up and running. Follow the instructions provided for the Python backend setup.     
+
+4. Configure Application Properties
+Before running the application, configure the necessary properties in application.properties located in src/main/resources.
+
+5. Run the Main Script:
+    ```bash
+    mvn clean install
+    mvn spring-boot:run
+    ```
+
+Your application backend is now set up and running. 
+
+       
+
 ### - To set up the frontend part of the project, follow these steps:
+
+
+
+
+
+
