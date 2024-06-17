@@ -24,8 +24,8 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME_Raj }}
-          password: ${{ secrets.DOCKER_PASSWORD_raj }}
+          username: ${{ secrets.DOCKER_USERNAME_RAJ }}
+          password: ${{ secrets.DOCKER_PASSWORD_RAJ }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
