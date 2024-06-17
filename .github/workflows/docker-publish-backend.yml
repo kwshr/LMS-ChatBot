@@ -27,7 +27,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME_RAJ }}
           password: ${{ secrets.DOCKER_PASSWORD_RAJ }}
 
-      - name: Build and push Docker image
+      - name: Build and push Backend Docker image
         uses: docker/build-push-action@v4
         with:
           context: backend/Chatbot
