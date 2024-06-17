@@ -34,4 +34,3 @@ jobs:
           file: backend/Chatbot/Dockerfile
           push: true
           tags: rajpunjabi47/springapi:latest
-          platforms: linux/amd64
