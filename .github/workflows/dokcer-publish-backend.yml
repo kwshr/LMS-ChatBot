@@ -33,5 +33,5 @@ jobs:
           context: backend/Chatbot
           file: backend/Chatbot/Dockerfile
           push: true
-          tags: your-dockerhub-username/springapi:latest
+          tags: rajpunjabi47/springapi:latest
           platforms: linux/amd64
