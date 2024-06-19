@@ -9,7 +9,7 @@ from GPT_Weights.LoadWeightsIntoGPT import load_weights_into_gpt
 import tiktoken
 # sys.path.insert(1,'C:\dev\LMS-ChatBot\LLM\Model')
 from Model.GPTModel import GPTModel
-from modelConfigurations import model_configs
+from ModelConfigurations import model_configs
 from flask_cors import CORS 
 
 CHOOSE_MODEL = "gpt2-small (124M)"
