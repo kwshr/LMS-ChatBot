@@ -11,6 +11,6 @@ ENV PYTHONPATH=/app/LLM/Data_Objects:/app/LLM/Model:/app/LLM/TextGeneration:/app
 
 EXPOSE 5000
 
-ENV FLASK_APP=main.py
+ENV FLASK_APP=PreTrainmain.py
 
 CMD ["flask", "run", "--host=0.0.0.0"]
