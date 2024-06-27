@@ -10,7 +10,8 @@ const MessageParser = ({ children, actions }) => {
     if(greetings.some(greetings => message.toLowerCase().includes(greetings)))
     actions.handleHello();
   else{
-    actions.handlePrompt(message);
+    actions.handleDefault();
+    // actions.handlePrompt(message);
   }
     }
 

@@ -17,6 +17,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     setChatBotMessage('How can i help you :)');
   };
 
+  const handleDefault = ()=>{
+    setChatBotMessage('ChatBot is under development! Please, come back at a later date :)')
+  }
+
   const handlePrompt = async (message) =>{
     try{
       const response = await axios.get('http://localhost:5000/generate',{
@@ -36,6 +40,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
           actions: {
             handleHello,
             handlePrompt,
+            handleDefault,
           },
         });
       })}
