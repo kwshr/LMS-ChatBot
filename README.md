@@ -46,8 +46,8 @@ If you find this book or code useful for your research, please consider citing i
     - If you want to manually edit the `top-k` and `temperature` settings to generate more coherent texts, you can do so by editing the `main.py` file:
       
         ```bash
-        # Open main.py
-        nano main.py
+        # Open PreTrainMain.py
+        nano PreTrainMain.py
 
         # Locate the configuration section and adjust the parameters as needed
         top_k = <desired_value>  # Example: top_k = 40
