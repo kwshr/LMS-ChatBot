@@ -43,7 +43,7 @@ If you find this book or code useful for your research, please consider citing i
     The script will prompt you to enter a prompt and the maximum number of tokens to generate. 
 
 4. Optional Configuration:
-    - If you want to manually edit the `top-k` and `temperature` settings to generate more coherent texts, you can do so by editing the `main.py` file:
+    - If you want to manually edit the `top-k` and `temperature` settings to generate more coherent texts, you can do so by editing the `PreTrainMain.py` file:
       
         ```bash
         # Open PreTrainMain.py
