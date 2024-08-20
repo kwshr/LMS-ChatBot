@@ -57,8 +57,31 @@ If you find this book or code useful for your research, please consider citing i
 
 ### - To set up the frontend part of the project, follow these steps:
 
+1. Navigate to the Frontend Directory:
+    ```bash
+    cd frontEnd/chatbot
+    ```
 
+2. Install Dependencies:
+    ```bash
+    npm install
+    ```
 
+    This command will install all the required packages listed in the `package.json` file.
+
+3. Start the Development Server:
+    ```bash
+    npm start
+    ```
+
+    The application should now be running on `http://localhost:3000/`, and you can interact with the chatbot through the web interface.
+
+4. Build for Production (Optional):
+    ```bash
+    npm run build
+    ```
+
+    This command will create an optimized build of the app, ready for deployment.
 
 
 
